@@ -37,15 +37,7 @@ if (module.hot) {
   });
 }
 
-if (process.env.NODE_ENV === 'development') {
-  window.g_history.listen(function(location) {
-    new Image().src = (window.routerBase + location.pathname).replace(
-      /\/\//g,
-      '/'
-    );
-  });
-}
-
+require('/Users/qudian/github/dva/examples/user-dashboard/src/global.css');
 // Enable service worker
 if (process.env.NODE_ENV === 'production') {
   require('./registerServiceWorker');

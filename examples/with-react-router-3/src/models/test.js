@@ -1,5 +1,5 @@
 export default {
-  namespace: 'example',
+  namespace: 'test',
 
   state: { name: 'liz' },
 

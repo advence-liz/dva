@@ -1,9 +1,12 @@
 import React from 'react';
+import { connect } from 'dva';
 
-const Example = () => {
-  return <div>Example</div>;
+const Example = ({ example }) => {
+  return <div>Example{example.name}</div>;
 };
 
 Example.propTypes = {};
 
-export default Example;
+export default connect(({ example }) => ({
+  example,
+}))(Example);
